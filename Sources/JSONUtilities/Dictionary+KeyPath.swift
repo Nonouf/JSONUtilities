@@ -23,7 +23,7 @@ extension Dictionary {
 
     keys.removeFirst()
 
-    if !keys.isEmpty, let subDictionary = value as? [Key : Any] {
+    if !keys.isEmpty, let subDictionary = value as? [Key: Any] {
       let rejoined = keys.joined(separator: ".")
       return subDictionary[keyPath: rejoined]
     }

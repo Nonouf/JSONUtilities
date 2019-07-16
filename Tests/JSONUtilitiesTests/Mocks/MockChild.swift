@@ -16,7 +16,7 @@ struct MockChild {
   let bool: Bool
 }
 
-extension MockChild : JSONObjectConvertible {
+extension MockChild: JSONObjectConvertible {
   init(jsonDictionary: JSONDictionary) throws {
     string = try jsonDictionary.json(atKeyPath: "stringKey")
     integer = try jsonDictionary.json(atKeyPath: "integerKey")
@@ -27,7 +27,7 @@ extension MockChild : JSONObjectConvertible {
 
 // MARK: Extensions necessary for testing
 
-extension MockChild : Equatable {}
+extension MockChild: Equatable {}
 
 func == (lhs: MockChild, rhs: MockChild) -> Bool {
   return lhs.string == rhs.string &&

@@ -99,24 +99,24 @@ public extension Dictionary where Key: StringProtocol {
   // MARK: RawRepresentable type
 
   @available(*, deprecated:3.0.0, renamed: "json(atKeyPath:)")
-  public func jsonKey<ReturnType: RawRepresentable>(_ key: Key) throws -> ReturnType where ReturnType.RawValue:JSONRawType {
+  public func jsonKey<ReturnType: RawRepresentable>(_ key: Key) throws -> ReturnType where ReturnType.RawValue: JSONRawType {
     return try json(atKeyPath: key)
   }
 
   @available(*, deprecated:3.0.0, renamed: "json(atKeyPath:)")
-  public func jsonKey<ReturnType: RawRepresentable>(_ key: Key) -> ReturnType? where ReturnType.RawValue:JSONRawType {
+  public func jsonKey<ReturnType: RawRepresentable>(_ key: Key) -> ReturnType? where ReturnType.RawValue: JSONRawType {
     return json(atKeyPath: key)
   }
 
   // MARK: [RawRepresentable] type
 
   @available(*, deprecated:3.0.0, renamed: "json(atKeyPath:)")
-  public func jsonKey<ReturnType: RawRepresentable>(_ key: Key) throws -> [ReturnType] where ReturnType.RawValue:JSONRawType {
+  public func jsonKey<ReturnType: RawRepresentable>(_ key: Key) throws -> [ReturnType] where ReturnType.RawValue: JSONRawType {
     return try json(atKeyPath: key)
   }
 
   @available(*, deprecated:3.0.0, renamed: "json(atKeyPath:)")
-  public func jsonKey<ReturnType: RawRepresentable>(_ key: Key) -> [ReturnType]? where ReturnType.RawValue:JSONRawType {
+  public func jsonKey<ReturnType: RawRepresentable>(_ key: Key) -> [ReturnType]? where ReturnType.RawValue: JSONRawType {
     return json(atKeyPath: key)
   }
 
